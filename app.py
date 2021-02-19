@@ -1,10 +1,11 @@
 from itertools import cycle
 from pathlib import Path
+from typing import Tuple
 
 import gradio as gr
 
 
-def alternating_caps(input):
+def alternating_caps(input: str) -> Tuple[str, str]:
     # Source: https://stackoverflow.com/a/42939226.
     funcs = cycle([str.lower, str.upper])
     iNpUt = "".join(next(funcs)(c) for c in input.strip())
