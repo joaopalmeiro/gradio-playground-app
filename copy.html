@@ -1,5 +1,6 @@
 <div class="examples">
   <button
+    id="copy-btn"
     style="background-color: white; border: solid 1px lightgray"
     onclick="copyTextToClipBoard()"
   >
@@ -9,15 +10,15 @@
   <script>
     function copyTextToClipBoard() {
       // Live: https://stackoverflow.com/a/54819633.
-      const copyText = document.getElementsByClassName("output_text")[1]
+      const copyText = document.getElementsByClassName('output_text')[1]
         .innerText;
 
       // Source: https://github.com/gradio-app/gradio/blob/master/gradio/templates/index.html#L135.
-      const el = document.createElement("textarea");
+      const el = document.createElement('textarea');
       el.value = copyText;
       document.body.appendChild(el);
       el.select();
-      document.execCommand("copy");
+      document.execCommand('copy');
       document.body.removeChild(el);
     }
   </script>

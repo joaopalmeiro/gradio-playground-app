@@ -27,7 +27,7 @@ iface = gr.Interface(
     allow_flagging=False,
     allow_screenshot=True,
     examples=[["Alternating caps"]],
-    css="hide_column.css",
+    css="custom.css",
     server_port=INITIAL_PORT_VALUE,
     server_name=LOCALHOST_NAME,
 )

@@ -24,3 +24,4 @@
 - Angelos Chalaris' "[How can I copy text to clipboard with JavaScript?](https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript)" blog post.
 - [HTMLInputElement.select()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select).
 - [Specifying a Python Runtime](https://devcenter.heroku.com/articles/python-runtimes).
+- Chris Coyier's "[::before vs :before](https://css-tricks.com/to-double-colon-or-not-do-double-colon/)" blog post.
