@@ -1,4 +1,5 @@
 from itertools import cycle
+from pathlib import Path
 
 import gradio as gr
 
@@ -8,23 +9,7 @@ def alternating_caps(input):
     funcs = cycle([str.lower, str.upper])
     iNpUt = "".join(next(funcs)(c) for c in input.strip())
 
-    html = """
-    <div class="examples">
-    <button style="background-color: white; border: solid 1px lightgray;" class="btn" data-clipboard-action="copy" data-clipboard-target="div.output_text">
-    Copy
-    </button>
-
-    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
-    
-    <script>
-    var clipboard = new ClipboardJS('.btn');
-
-    clipboard.on('success', function (e) {
-        console.log(e);
-    });
-    </script> 
-    </div>
-    """
+    html = Path("copy.html").read_text()
 
     return iNpUt, html
 
@@ -39,6 +24,7 @@ iface = gr.Interface(
     allow_flagging=False,
     allow_screenshot=True,
     examples=[["Alternating caps"]],
+    css="hide_column.css",
 )
 
 # iface.test_launch()

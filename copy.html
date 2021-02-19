@@ -1,0 +1,32 @@
+<div class="examples">
+  <button
+    style="background-color: white; border: solid 1px lightgray"
+    onclick="copyTextToClipBoard()"
+  >
+    Copy
+  </button>
+
+  <script>
+    function copyTextToClipBoard() {
+      // Live: https://stackoverflow.com/a/54819633.
+      const copyText = document.getElementsByClassName("output_text")[1]
+        .innerText;
+
+      // Source: https://github.com/gradio-app/gradio/blob/master/gradio/templates/index.html#L135.
+      const el = document.createElement("textarea");
+      el.value = copyText;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand("copy");
+      document.body.removeChild(el);
+    }
+  </script>
+  <!-- <style>
+    /* Workaround to hide the example column for the copy button. */
+    /* Note: Load it via `Interface` instead. */
+    table.examples-content th:nth-child(3),
+    table.examples-content td:nth-child(3) {
+      display: none;
+    }
+  </style> -->
+</div>

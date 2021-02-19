@@ -1,0 +1,4 @@
+table.examples-content th:nth-child(3),
+table.examples-content td:nth-child(3) {
+  display: none;
+}
