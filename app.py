@@ -3,6 +3,7 @@ from pathlib import Path
 from typing import Tuple
 
 import gradio as gr
+from gradio.networking import INITIAL_PORT_VALUE, LOCALHOST_NAME
 
 
 def alternating_caps(input: str) -> Tuple[str, str]:
@@ -15,6 +16,7 @@ def alternating_caps(input: str) -> Tuple[str, str]:
     return iNpUt, html
 
 
+# More info: https://github.com/gradio-app/gradio/blob/master/gradio/interface.py#L46.
 iface = gr.Interface(
     fn=alternating_caps,
     inputs=gr.inputs.Textbox(lines=1, placeholder="...", label="Input"),
@@ -26,10 +28,15 @@ iface = gr.Interface(
     allow_screenshot=True,
     examples=[["Alternating caps"]],
     css="hide_column.css",
+    server_port=INITIAL_PORT_VALUE,
+    server_name=LOCALHOST_NAME,
 )
 
 # iface.test_launch()
 
 if __name__ == "__main__":
+    print(LOCALHOST_NAME)
+    print(INITIAL_PORT_VALUE)
+
     # iface.launch(inbrowser=True)
     iface.launch()
