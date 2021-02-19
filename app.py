@@ -35,8 +35,8 @@ iface = gr.Interface(
 # iface.test_launch()
 
 if __name__ == "__main__":
-    print(LOCALHOST_NAME)
-    print(INITIAL_PORT_VALUE)
+    print("server_name:", LOCALHOST_NAME)
+    print("server_port:", INITIAL_PORT_VALUE)
 
     # iface.launch(inbrowser=True)
     iface.launch()

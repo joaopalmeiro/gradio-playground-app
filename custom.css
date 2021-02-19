@@ -2,3 +2,15 @@ table.examples-content th:nth-child(3),
 table.examples-content td:nth-child(3) {
   display: none;
 }
+
+.slide {
+  --hover: #e67e22;
+  --color: white;
+}
+
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+  color: var(--color);
+  border-color: var(--hover) !important;
+}

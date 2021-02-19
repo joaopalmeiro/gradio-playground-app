@@ -25,3 +25,4 @@
 - [HTMLInputElement.select()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select).
 - [Specifying a Python Runtime](https://devcenter.heroku.com/articles/python-runtimes).
 - Chris Coyier's "[::before vs :before](https://css-tricks.com/to-double-colon-or-not-do-double-colon/)" blog post.
+- Giana's [Button hover effects with box-shadow](https://codepen.io/giana/pen/BZaGyP) pen.
