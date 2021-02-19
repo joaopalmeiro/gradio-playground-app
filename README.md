@@ -6,6 +6,10 @@
 2. `pipenv shell`.
 3. `python app.py`.
 
+## Deployment
+
+- `pipenv run pip freeze > requirements.txt`.
+
 ## Notes
 
 - Clipboard:
